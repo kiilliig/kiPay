@@ -137,12 +137,13 @@ app.post('/login', function(req, res){
 
 // *----등록계좌조회 page 구현----*//
 app.post('/list', auth, function(req, res){
-   //#work6 requsest url https://testapi.openbanking.or.kr/v2.0/user/me?user_seq_no=1100034736
+
    var user = req.decoded;
    console.log(user);
    var sql = "SELECT * FROM user WHERE id = ?"
    connection.query(sql,[user.userId], function(err, result){
      console.log(result);
+     // 등록계좌조회 api 데이터 가져오기.
      var option = {
        method : "GET",
        url : "https://testapi.openbanking.or.kr/v2.0/user/me",

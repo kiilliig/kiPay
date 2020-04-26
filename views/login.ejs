@@ -175,7 +175,7 @@
                 },
                 success:function(data){
                     console.log(data);
-					sessionStorage.setItem('jwtToken', data);  // 세션 스토리지에 jwttoken 저장
+					sessionStorage.setItem('jwtToken', data);  // 세션 스토리지에 jwttoken 저장.
 					if(data.length > 10){
 						window.location.href = "/main"
 					}

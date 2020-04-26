@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/public')); // 정적파일 다루기, css,i
 var connection = mysql.createConnection({
  host     : 'localhost',
  user     : 'root',
- password : 'winner2411', // workbench에 입력한 개인 pw
+ password : '****', // workbench에 입력한 개인 pw
  database : 'fintech',
  port : 3306
 });
